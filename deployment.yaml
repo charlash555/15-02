@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: azuredevops
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: azuredevops
+  template:
+    metadata:
+      labels:
+        app: azuredevops
+    spec:
+      containers:
+        - name: azuredevops
+          image: charlash555/batman
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
