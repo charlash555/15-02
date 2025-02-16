@@ -14,6 +14,6 @@ RUN unzip drool.zip
 RUN cp -rvf drool/* .
 RUN rm -rf drool drool.zip
 
-CMD ["servicectl", "-D", "FOREGROUND"]
+CMD ["nginx", "-D", "FOREGROUND"]
 
-EXPOSE 80
+EXPOSE 80 22
