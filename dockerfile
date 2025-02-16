@@ -9,11 +9,11 @@ RUN apt-get update && apt-get install -y nginx \
 
 WORKDIR /var/www/html/
 
-RUN wget -O drool.zip https://www.free-css.com/assets/files/free-css-templates/download/page291/drool.zip
-RUN unzip drool.zip
-RUN cp -rvf drool/* .
-RUN rm -rf drool drool.zip
+RUN wget -O photogenic.zip https://www.free-css.com/assets/files/free-css-templates/download/page254/photogenic.zip
+RUN unzip photogenic.zip
+RUN cp -rvf photogenic/* .
+RUN rm -rf photogenic photogenic.zip
 
 CMD ["nginx", "-D", "FOREGROUND"]
 
-EXPOSE 80 22
+EXPOSE 80
